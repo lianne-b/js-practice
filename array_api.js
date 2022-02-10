@@ -5,7 +5,10 @@ const hearts =["🧡", "💛", "💚", "💙", "💜", "🤎", "🖤", "🤍", "
 const datesOfJanuary = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
 
-// List of APIs: 
+// List of APIs:
+
+// Array.from(): creates a new, shallow-copied array instance from an array-like . iterable object
+console.log(Array.from("i l o v e u"));
 
 // length: gets or sets the length of the array
 const numberOfHearts = hearts.length;
@@ -72,6 +75,7 @@ console.log(datesOfJanuary.slice(5)); // if end is undefined, the slice extends 
 
 // ************************ 
 // sort(): sorts an array in place & mutates the array & returns a reference to the same array
+// The default sort order is ascending
 console.log(datesOfJanuary.sort((a, b)=> a - b));
 console.log(hearts.sort((a,b) => a - b));
 console.log([1,4,6,2].sort((a, b) => a = b));
