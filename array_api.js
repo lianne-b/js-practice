@@ -7,12 +7,18 @@ const datesOfJanuary = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 1
 
 // List of APIs:
 
+
 // Array.from(): creates a new, shallow-copied array instance from an array-like . iterable object
 console.log(Array.from("i l o v e u"));
+
 
 // length: gets or sets the length of the array
 const numberOfHearts = hearts.length;
 console.log(numberOfHearts);
+
+
+// find(): Returns the value of the first element in the array where predicate is true, and undefined
+console.log(datesOfJanuary.find(date => date === 10));
 
 
 // toString(): returns a string representation of an array
@@ -71,7 +77,7 @@ console.log(hearts.slice(0, 3));
 console.log(hearts.slice(undefined,3)); // if start is undefined, the slice begins at index 0
 console.log(datesOfJanuary.slice(5, -1)); // a negative number can be used for (start, end) to indicate an offset from *the end of the array*
 console.log(datesOfJanuary.slice(5)); // if end is undefined, the slice extends to the end of the array
-
+// *** end parameter is exclusive of the element at the index 'end' (not returned)
 
 // ************************ 
 // sort(): sorts an array in place & mutates the array & returns a reference to the same array
