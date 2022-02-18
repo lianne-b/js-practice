@@ -40,10 +40,24 @@ class UserStorage {
 
 
 
+
 const userStorage1 = new UserStorage();
 const id = prompt("Enter your id");
 const password = prompt("Enter your password");
-userStorage1.loginUser(id, password)
-.then(userStorage1.getRoles)
-.then(user => alert(`Hello ${user.name}, you have a(n) ${user.role} role.`))
-.catch(console.log);
+
+
+
+// userStorage1.loginUser(id, password)
+// .then(userStorage1.getRoles)
+// .then(user => alert(`Hello ${user.name}, you have a(n) ${user.role} role.`))
+// .catch(console.log); 
+
+
+// Updated version with async & await:
+async function getUserRole() {
+    const user = await userStorage1.loginUser(id, password);
+    const userInfo = await userStorage1.getRoles(user);
+    return userInfo;
+}
+
+getUserRole().then(user => alert(`Hello ${user.name}, you have a(n) ${user.role} role`));
